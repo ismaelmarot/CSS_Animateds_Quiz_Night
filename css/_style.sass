@@ -1,0 +1,61 @@
+/*===== STYLES =====*/
+.grid-container
+	@include flex-column
+	justify-content: center
+	margin-top: 5em
+	background-color: nth($color-list,3)
+
+.letter
+	@include flex-column
+	text-shadow: 0.04em 0.04em nth($color-list,4)
+	font-size: 15em
+ 
+.letter-Q
+	color: nth($color-list,1)
+	@include animationLetterQuiz(.2s)	
+
+.letter-U
+	color: nth($color-list,6) 
+	@include animationLetterQuiz(.4s)
+
+.letter-I
+	color: nth($color-list,5)
+	@include animationLetterQuiz(.6s)
+
+.letter-z
+	color: nth($color-list,2)	
+	@include animationLetterQuiz(.8s)
+
+.letter-n
+	@include animationLetterNight(.2s)
+
+.letter-i2
+	@include animationLetterNight(.3s)	
+
+.letter-g
+	@include animationLetterNight(.4s)	
+
+.letter-h
+	@include animationLetterNight(.5s)	
+
+.letter-t
+	@include animationLetterNight(.6s)		
+
+.word-quiz , .word-night
+	@include flex-row
+	div
+		@include flex-column
+		@include setWidhtHeight(10em,10em)
+
+.word-quiz
+	font-family: nth($fonts-list,2)
+	z-index: 3
+
+.word-night
+	font-family: nth($fonts-list,1)
+	color: nth($color-list,7)
+	margin-top: 3em
+
+.back
+	border: 1px solid black
+	height: 50px 

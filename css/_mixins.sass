@@ -1,0 +1,46 @@
+/*===== MIXINS =====*/
+@mixin flex-row
+	display: flex
+	justify-content: center
+	align-items: center
+
+@mixin flex-column
+	@include flex-row
+	flex-direction: column
+
+@mixin setWidhtHeight($width,$height)
+	width: $width
+	height: $height
+
+@mixin animationLetterQuiz($animationDelay)
+	animation: displacementLetterQuiz infinite 
+	animation-duration: 2s
+	animation-delay: $animationDelay
+
+@mixin animationLetterNight($animationDelay)
+	animation: displacementLetterNight infinite
+	animation-duration: 2s
+	animation-delay: $animationDelay	
+
+/*===== ANIMATIONS =====*/
+@keyframes displacementLetterQuiz
+	0% 
+		margin-top: 0em
+	35%
+		margin-top: 0.1em
+	50%
+		margin-top: -0.3em	
+	60%
+		margin-top: 0.2em
+	100%
+		margin-top: 0em		
+
+@keyframes displacementLetterNight
+	0%
+		margin-top: 0em
+	59%
+		margin-top: 0em	
+	80%	
+		margin-top: .3em
+	100%
+		margin-top: 0em	

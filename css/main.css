@@ -1,0 +1,157 @@
+/*===== MAIN =====*/
+/*===== GRID LAYOUT =====*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.word-quiz {
+  grid-column: 1/5;
+}
+
+/*===== VARIABLES =====*/
+/*===== COLORS =====*/
+/*===== FONTS =====*/
+/*===== LISTS =====*/
+/*===== MIXINS =====*/
+/*===== ANIMATIONS =====*/
+@keyframes displacementLetterQuiz {
+  0% {
+    margin-top: 0em;
+  }
+  35% {
+    margin-top: 0.1em;
+  }
+  50% {
+    margin-top: -0.3em;
+  }
+  60% {
+    margin-top: 0.2em;
+  }
+  100% {
+    margin-top: 0em;
+  }
+}
+@keyframes displacementLetterNight {
+  0% {
+    margin-top: 0em;
+  }
+  59% {
+    margin-top: 0em;
+  }
+  80% {
+    margin-top: 0.3em;
+  }
+  100% {
+    margin-top: 0em;
+  }
+}
+/*===== STYLES =====*/
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5em;
+  background-color: #fd79a8;
+}
+
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: 0.04em 0.04em #1e272e;
+  font-size: 15em;
+}
+
+.letter-Q {
+  color: #d63031;
+  animation: displacementLetterQuiz infinite;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+}
+
+.letter-U {
+  color: #33d9b2;
+  animation: displacementLetterQuiz infinite;
+  animation-duration: 2s;
+  animation-delay: 0.4s;
+}
+
+.letter-I {
+  color: #fbc531;
+  animation: displacementLetterQuiz infinite;
+  animation-duration: 2s;
+  animation-delay: 0.6s;
+}
+
+.letter-z {
+  color: #74b9ff;
+  animation: displacementLetterQuiz infinite;
+  animation-duration: 2s;
+  animation-delay: 0.8s;
+}
+
+.letter-n {
+  animation: displacementLetterNight infinite;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+}
+
+.letter-i2 {
+  animation: displacementLetterNight infinite;
+  animation-duration: 2s;
+  animation-delay: 0.3s;
+}
+
+.letter-g {
+  animation: displacementLetterNight infinite;
+  animation-duration: 2s;
+  animation-delay: 0.4s;
+}
+
+.letter-h {
+  animation: displacementLetterNight infinite;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+}
+
+.letter-t {
+  animation: displacementLetterNight infinite;
+  animation-duration: 2s;
+  animation-delay: 0.6s;
+}
+
+.word-quiz, .word-night {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.word-quiz div, .word-night div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 10em;
+  height: 10em;
+}
+
+.word-quiz {
+  font-family: "Ranchers", cursive;
+  z-index: 3;
+}
+
+.word-night {
+  font-family: "Modak", cursive;
+  color: white;
+  margin-top: 3em;
+}
+
+.back {
+  border: 1px solid black;
+  height: 50px;
+}
+
+/*# sourceMappingURL=main.css.map */
